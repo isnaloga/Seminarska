@@ -29,17 +29,17 @@ public static class DbInitializer{
         context.Plans.AddRange(plans);
         context.SaveChanges();
         var customers = new Customer[]{
-            new Customer { FirstName = "Alice", LastName = "Green", Email = "alice.green@example.com", PhoneNumber = "789-012-3456", PlanID = 1 },
-            new Customer { FirstName = "Bob", LastName = "White", Email = "bob.white@example.com", PhoneNumber = "890-123-4567", PlanID = 2 },
-            new Customer { FirstName = "Charlie", LastName = "Black", Email = "charlie.black@example.com", PhoneNumber = "901-234-5678", PlanID = 3 },
-            new Customer { FirstName = "Diana", LastName = "Blue", Email = "diana.blue@example.com", PhoneNumber = "012-345-6789", PlanID = 4 },
-            new Customer { FirstName = "Ethan", LastName = "Gray", Email = "ethan.gray@example.com", PhoneNumber = "123-456-7891", PlanID = 5 },
-            new Customer { FirstName = "Fiona", LastName = "Red", Email = "fiona.red@example.com", PhoneNumber = "234-567-8902", PlanID = 1 },
-            new Customer { FirstName = "George", LastName = "Yellow", Email = "george.yellow@example.com", PhoneNumber = "345-678-9013", PlanID = 2 },
-            new Customer { FirstName = "Hannah", LastName = "Purple", Email = "hannah.purple@example.com", PhoneNumber = "456-789-0124", PlanID = 3 },
-            new Customer { FirstName = "Ian", LastName = "Orange", Email = "ian.orange@example.com", PhoneNumber = "567-890-1235", PlanID = 4 },
-            new Customer { FirstName = "Julia", LastName = "Pink", Email = "julia.pink@example.com", PhoneNumber = "678-901-2346", PlanID = 5 }
-    };
+            new Customer { FirstName = "Alice", LastName = "Green", Email = "alice.green@example.com", PhoneNumber = "789-012-3456", Address = "123 Green St", PlanID = 1 },
+            new Customer { FirstName = "Bob", LastName = "White", Email = "bob.white@example.com", PhoneNumber = "890-123-4567", Address = "456 White St", PlanID = 2 },
+            new Customer { FirstName = "Charlie", LastName = "Black", Email = "charlie.black@example.com", PhoneNumber = "901-234-5678", Address = "789 Black St", PlanID = 3 },
+            new Customer { FirstName = "Diana", LastName = "Blue", Email = "diana.blue@example.com", PhoneNumber = "012-345-6789", Address = "012 Blue St", PlanID = 4 },
+            new Customer { FirstName = "Ethan", LastName = "Gray", Email = "ethan.gray@example.com", PhoneNumber = "123-456-7891", Address = "345 Gray St", PlanID = 5 },
+            new Customer { FirstName = "Fiona", LastName = "Red", Email = "fiona.red@example.com", PhoneNumber = "234-567-8902", Address = "678 Red St", PlanID = 1 },
+            new Customer { FirstName = "George", LastName = "Yellow", Email = "george.yellow@example.com", PhoneNumber = "345-678-9013", Address = "901 Yellow St", PlanID = 2 },
+            new Customer { FirstName = "Hannah", LastName = "Purple", Email = "hannah.purple@example.com", PhoneNumber = "456-789-0124", Address = "234 Purple St", PlanID = 3 },
+            new Customer { FirstName = "Ian", LastName = "Orange", Email = "ian.orange@example.com", PhoneNumber = "567-890-1235", Address = "567 Orange St", PlanID = 4 },
+            new Customer { FirstName = "Julia", LastName = "Pink", Email = "julia.pink@example.com", PhoneNumber = "678-901-2346", Address = "890 Pink St", PlanID = 5 }
+        };
         context.Customers.AddRange(customers);
         context.SaveChanges();
     }
