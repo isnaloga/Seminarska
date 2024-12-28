@@ -1,5 +1,6 @@
 using IS_nal.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace IS_nal.Data
 {
