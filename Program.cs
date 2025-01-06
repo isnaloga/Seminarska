@@ -18,6 +18,9 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<FitnesContext>(options =>
     options.UseSqlServer(connectionString));
 
+builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = false)
+.AddRoles<IdentityRole>().AddEntityFrameworkStores<FitnesContext>();
+
 var app = builder.Build();
 
 // Seed database using DbInitializer 
@@ -41,7 +44,7 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
-
+app.MapRazorPages();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");

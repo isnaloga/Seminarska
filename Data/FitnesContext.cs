@@ -4,9 +4,10 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace IS_nal.Data
 {
-    public class FitnesContext : DbContext
+    public class FitnesContext : IdentityDbContext<ApplicationUser>
     {
-        public FitnesContext(DbContextOptions<FitnesContext> options) : base(options)
+        public FitnesContext(DbContextOptions<FitnesContext> options)
+            : base(options)
         {
         }
 
@@ -16,6 +17,7 @@ namespace IS_nal.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Trainer>().ToTable("Trainer");
             modelBuilder.Entity<Plan>().ToTable("Plan");
             modelBuilder.Entity<Customer>().ToTable("Customer");
