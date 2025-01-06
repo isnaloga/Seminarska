@@ -7,9 +7,12 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using IS_nal.Data;
 using IS_nal.Models;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 
 namespace IS_nal.Controllers
-{
+{   
+    [Authorize]
     public class CustomersController : Controller
     {
         private readonly FitnesContext _context;
