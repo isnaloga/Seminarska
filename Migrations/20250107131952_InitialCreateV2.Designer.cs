@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace IS_nal.Migrations
 {
     [DbContext(typeof(FitnesContext))]
-    [Migration("20250107115512_ExtendCourse")]
-    partial class ExtendCourse
+    [Migration("20250107131952_InitialCreateV2")]
+    partial class InitialCreateV2
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

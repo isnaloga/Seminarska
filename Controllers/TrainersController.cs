@@ -12,7 +12,7 @@ using Microsoft.AspNetCore.Identity;
 
 namespace IS_nal.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "Admin,Trainer")]
     public class TrainersController : Controller
     {
         

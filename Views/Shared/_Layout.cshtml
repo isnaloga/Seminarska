@@ -38,12 +38,12 @@
                          <li class="nav-item">
                             <a class="nav-link text-white" asp-area="" asp-controller="Customers" asp-action="Index">Customers</a>
                         </li>
-                        }
-                        @if (SignInManager.IsSignedIn(User))
-                        {
-                            <li class="nav-item">
-                                <a class="nav-link text-white" asp-area="" asp-controller="Trainers" asp-action="Index">Trainers</a>
-                            </li>
+                            @if (User.IsInRole("Admin") || User.IsInRole("Trainer"))
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" asp-area="" asp-controller="Trainers" asp-action="Index">Trainers</a>
+                                </li>
+                            }
                         }
                     </ul>
                     

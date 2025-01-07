@@ -5,7 +5,7 @@
 namespace IS_nal.Migrations
 {
     /// <inheritdoc />
-    public partial class ExtendedCourse : Migration
+    public partial class InitialCreateV2 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
