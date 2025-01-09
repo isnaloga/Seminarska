@@ -60,7 +60,7 @@ namespace IS_nal.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("CustomerID,LastName,FirstName,Email,PhoneNumber,Address,PlanID")] Customer customer)
+        public async Task<IActionResult> Create([Bind("LastName,FirstName,Email,PhoneNumber,Address,PlanID")] Customer customer)
         {
             if (ModelState.IsValid)
             {
