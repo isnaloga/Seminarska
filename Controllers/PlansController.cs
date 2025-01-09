@@ -28,6 +28,11 @@ namespace IS_nal.Controllers
             var fitnesContext = _context.Plans.Include(p => p.Trainer);
             return View(await fitnesContext.ToListAsync());
         }
+        public async Task<IActionResult> Nlogin()
+        {
+            var fitnesContext = _context.Plans.Include(p => p.Trainer);
+            return View(await fitnesContext.ToListAsync());
+        }
 
         // GET: Plans/Details/5
         public async Task<IActionResult> Details(int? id)
@@ -49,7 +54,6 @@ namespace IS_nal.Controllers
         }
 
         // GET: Plans/Create
-        [Authorize]
         public IActionResult Create()
         {
             ViewData["TrainerID"] = new SelectList(_context.Trainers, "TrainerID", "TrainerID");
@@ -74,7 +78,6 @@ namespace IS_nal.Controllers
         }
 
         // GET: Plans/Edit/5
-        [Authorize]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -128,7 +131,6 @@ namespace IS_nal.Controllers
         }
 
         // GET: Plans/Delete/5
-        [Authorize]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)

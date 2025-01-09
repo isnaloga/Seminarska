@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var connectionString = builder.Configuration.GetConnectionString("CloudDB");
+var connectionString = builder.Configuration.GetConnectionString("FitnesContext");
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

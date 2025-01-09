@@ -1,0 +1,22 @@
+@model IEnumerable<IS_nal.Models.Trainer>
+@using Microsoft.AspNetCore.Authorization;
+@using Microsoft.AspNetCore.Identity;
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+@{
+    ViewData["Title"] = "Nlogin";
+}
+
+<h1>Trainers</h1>
+
+<div class="flex-container">
+    @foreach (var trainer in Model)
+    {
+        <div class="flex-item">
+            <div class="item-name">@trainer.FirstName @trainer.LastName</div>
+            <div class="item-description">@trainer.Email</div>
+            <div class="item-description">@trainer.PhoneNumber</div>
+        </div>
+    }
+</div>

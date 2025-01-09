@@ -12,7 +12,6 @@ using Microsoft.AspNetCore.Identity;
 
 namespace IS_nal.Controllers
 {
-    [Authorize]
     public class TrainersController : Controller
     {
         
@@ -25,6 +24,11 @@ namespace IS_nal.Controllers
 
         // GET: Trainers
         public async Task<IActionResult> Index()
+        {
+            return View(await _context.Trainers.ToListAsync());
+        }
+
+        public async Task<IActionResult> Nlogin()
         {
             return View(await _context.Trainers.ToListAsync());
         }

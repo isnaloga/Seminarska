@@ -1,0 +1,27 @@
+@model IEnumerable<IS_nal.Models.Plan>
+@using Microsoft.AspNetCore.Authorization;
+@using Microsoft.AspNetCore.Identity;
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+@{
+    ViewData["Title"] = "Nlogin";
+}
+
+<h1>Plans</h1>
+
+@if (SignInManager.IsSignedIn(User)){<p>
+    <a asp-action="Create">Create New</a>
+    </p>
+    }
+
+<div class="flex-container">
+    @foreach (var plan in Model)
+    {
+        <div class="flex-item">ß
+            <div class="item-name">@plan.Name</div>
+            <div class="item-description">@plan.Description</div>
+            <div class="item-price">@plan.Price.ToString("C")</div>
+        </div>
+    }
+</div>
