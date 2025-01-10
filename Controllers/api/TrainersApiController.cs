@@ -10,49 +10,49 @@ using IS_nal.Models;
 
 namespace IS_nal.Controllers_api
 {
-    [Route("api/v1/Customer")]
+    [Route("api/v1/Trainer")]
     [ApiController]
-    public class CustomersApiController : ControllerBase
+    public class TrainersApiController : ControllerBase
     {
         private readonly FitnesContext _context;
 
-        public CustomersApiController(FitnesContext context)
+        public TrainersApiController(FitnesContext context)
         {
             _context = context;
         }
 
-        // GET: api/CustomersApi
+        // GET: api/TrainersApi
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Customer>>> GetCustomers()
+        public async Task<ActionResult<IEnumerable<Trainer>>> GetTrainers()
         {
-            return await _context.Customers.ToListAsync();
+            return await _context.Trainers.ToListAsync();
         }
 
-        // GET: api/CustomersApi/5
+        // GET: api/TrainersApi/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Customer>> GetCustomer(int id)
+        public async Task<ActionResult<Trainer>> GetTrainer(int id)
         {
-            var customer = await _context.Customers.FindAsync(id);
+            var trainer = await _context.Trainers.FindAsync(id);
 
-            if (customer == null)
+            if (trainer == null)
             {
                 return NotFound();
             }
 
-            return customer;
+            return trainer;
         }
 
-        // PUT: api/CustomersApi/5
+        // PUT: api/TrainersApi/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutCustomer(int id, Customer customer)
+        public async Task<IActionResult> PutTrainer(int id, Trainer trainer)
         {
-            if (id != customer.CustomerID)
+            if (id != trainer.TrainerID)
             {
                 return BadRequest();
             }
 
-            _context.Entry(customer).State = EntityState.Modified;
+            _context.Entry(trainer).State = EntityState.Modified;
 
             try
             {
@@ -60,7 +60,7 @@ namespace IS_nal.Controllers_api
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!CustomerExists(id))
+                if (!TrainerExists(id))
                 {
                     return NotFound();
                 }
@@ -73,36 +73,36 @@ namespace IS_nal.Controllers_api
             return NoContent();
         }
 
-        // POST: api/CustomersApi
+        // POST: api/TrainersApi
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Customer>> PostCustomer(Customer customer)
+        public async Task<ActionResult<Trainer>> PostTrainer(Trainer trainer)
         {
-            _context.Customers.Add(customer);
+            _context.Trainers.Add(trainer);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetCustomer", new { id = customer.CustomerID }, customer);
+            return CreatedAtAction("GetTrainer", new { id = trainer.TrainerID }, trainer);
         }
 
-        // DELETE: api/CustomersApi/5
+        // DELETE: api/TrainersApi/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteCustomer(int id)
+        public async Task<IActionResult> DeleteTrainer(int id)
         {
-            var customer = await _context.Customers.FindAsync(id);
-            if (customer == null)
+            var trainer = await _context.Trainers.FindAsync(id);
+            if (trainer == null)
             {
                 return NotFound();
             }
 
-            _context.Customers.Remove(customer);
+            _context.Trainers.Remove(trainer);
             await _context.SaveChangesAsync();
 
             return NoContent();
         }
 
-        private bool CustomerExists(int id)
+        private bool TrainerExists(int id)
         {
-            return _context.Customers.Any(e => e.CustomerID == id);
+            return _context.Trainers.Any(e => e.TrainerID == id);
         }
     }
 }
