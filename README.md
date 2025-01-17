@@ -17,4 +17,5 @@ To je FITNES STUDIO oz. aplikacija, ki je namenjena lastnikom nekega fitnesa. De
 Domen: začetek (vzpostavil projekt sepravi vse osnove in naredil podatkovno bazo), Uredil avtentikacijo in omogočil ter uredil prikaz podatkov iz baze, css za ozadje in prikaz elementov. 
 Nik: Naredil Android aplikacijo, opravil vizualne spremembne spletne aplikacije (olepšani gumbi spremenjena barva itd.), vspostavil API-je, objavil in uredil vse kar je povezano z Microsoft Azure.
 ## Slika podatkovnega modela podatkovne baze
-![image](https://github.com/user-attachments/assets/f3187505-4859-48bc-9208-e23e7d5ebe72)
+![image](https://github.com/user-attachments/assets/5a925134-2b0e-4656-b76d-2ae9eca77783)
+
