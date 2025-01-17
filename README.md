@@ -14,6 +14,7 @@ Domen Mramor 63220226
 ## Opis delovanja celotnega sistema:
 To je FITNES STUDIO oz. aplikacija, ki je namenjena lastnikom nekega fitnesa. Deluje tako, da imamo v podatkovni bazi shranjene vse customerje, trenerje in različne plane. Aplikacija je zasnovana tako, da ko se prijaviš, lahko urejaš vse prej našteto od spreminjanja, brisanja in dodajanja.
 ## Opis nalog, ki sva jih izvedla:
-Domen: začetek (vzpostavil projekt sepravi vse osnove in naredil podatkovno bazo), 
+Domen: začetek (vzpostavil projekt sepravi vse osnove in naredil podatkovno bazo), Uredil avtentikacijo in omogočil ter uredil prikaz podatkov iz baze, css za ozadje in prikaz elementov. 
 Nik: Naredil Android aplikacijo, opravil vizualne spremembne spletne aplikacije (olepšani gumbi spremenjena barva itd.), vspostavil API-je, objavil in uredil vse kar je povezano z Microsoft Azure.
 ## Slika podatkovnega modela podatkovne baze
+![image](https://github.com/user-attachments/assets/f3187505-4859-48bc-9208-e23e7d5ebe72)
